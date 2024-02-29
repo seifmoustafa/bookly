@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:flutter/widgets.dart';
 import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/Features/home/presentation/views/home_view.dart';
 import 'package:bookly/Features/splash/presentation/views/widgets/fading_logo.dart';
 import 'package:bookly/Features/splash/presentation/views/widgets/sliding_text.dart';
