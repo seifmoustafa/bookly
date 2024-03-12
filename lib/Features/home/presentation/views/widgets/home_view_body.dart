@@ -1,6 +1,5 @@
-import 'package:flutter/widgets.dart';
+import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featured_list_view.dart';
@@ -13,48 +12,41 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomScrollView(
       slivers: [
-        // SliverToBoxAdapter(
-        //   child: Column(
-        //     crossAxisAlignment: CrossAxisAlignment.start,
-        //     children: [
-        //       CustomAppBar(),
-        //       FeaturedBooksListView(),
-        //       SizedBox(
-        //         height: 50,
-        //       ),
-        //       Padding(
-        //         padding: EdgeInsets.symmetric(horizontal: 30),
-        //         child: Text(
-        //           'Best Seller',
-        //           style: Styles.textStyle18,
-        //         ),
-        //       ),
-        //       SizedBox(
-        //         height: 20,
-        //       ),
-        //     ],
-        //   ),
-        // ),
-        SliverFillRemaining(
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          CustomAppBar(),
-          FeaturedBooksListView(),
-          SizedBox(
-            height: 50,
+        SliverAppBar(
+          pinned: true,
+          floating: true,
+          automaticallyImplyLeading: false,
+          backgroundColor: kPrimaryColor,
+          flexibleSpace: CustomAppBar(),
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // CustomAppBar(),
+              FeaturedBooksListView(),
+              SizedBox(
+                height: 50,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Best Seller',
+                  style: Styles.textStyle18,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Text(
-              'Best Seller',
-              style: Styles.textStyle18,
-            ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: Expanded(child: BestSellerListView()),
           ),
-          SizedBox(
-            height: 20,
-          ),
-          Expanded(child: BestSellerListView()),
-        ])),
+        )
       ],
     );
   }
