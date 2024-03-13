@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'featured_books_state.dart';
 
-class FeturedBooksCubit extends Cubit<FeaturedBooksState> {
-  FeturedBooksCubit(this.homeRepo) : super(FeaturedBooksInitial());
+class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
+  FeaturedBooksCubit(this.homeRepo) : super(FeaturedBooksInitial());
 
   final HomeRepo homeRepo;
 
