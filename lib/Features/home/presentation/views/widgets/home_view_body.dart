@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featured_list_view.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/best_seller_listview.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/newest_books_listview.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -31,7 +31,7 @@ class HomeViewBody extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Best Seller',
+                  'Newest Books',
                   style: Styles.textStyle18,
                 ),
               ),
@@ -44,7 +44,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0),
-            child: Expanded(child: BestSellerListView()),
+            child: Expanded(child: NewestBooksListView()),
           ),
         )
       ],
