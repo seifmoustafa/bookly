@@ -2,7 +2,6 @@ import 'package:bookly/core/book_model/book_model.dart';
 import 'package:bookly/core/functions/launch_custom_url.dart';
 import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class BooksAction extends StatelessWidget {
   const BooksAction({super.key, required this.bookModel});
