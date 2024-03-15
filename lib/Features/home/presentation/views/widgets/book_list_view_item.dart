@@ -4,7 +4,6 @@ import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:bookly/core/utils/styles.dart';
-import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,7 +18,10 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        GoRouter.of(context).push(
+          AppRouter.kBookDetailsView,
+          extra: bookModel,
+        );
       },
       child: SizedBox(
         height: 125,
