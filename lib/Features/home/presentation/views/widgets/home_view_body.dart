@@ -16,6 +16,7 @@ class HomeViewBody extends StatelessWidget {
     return PopScope(
       canPop: false,
       onPopInvoked: (didPop) async {
+        popNum++;
         if (popNum == 2) {
           exit(0);
         } else {
