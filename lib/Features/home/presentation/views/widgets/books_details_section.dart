@@ -1,6 +1,6 @@
 import 'package:bookly/core/book_model/book_model.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/book_rating.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/books_action.dart';
+import 'package:bookly/core/widgets/book_rating.dart';
+import 'package:bookly/core/widgets/books_action.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +39,7 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            book.volumeInfo.authors?[0] ?? 'Seif Moustafa',
+            book.volumeInfo.authors?[0] ?? 'Unknown auther',
             style: Styles.textStyle18.copyWith(
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w500,

@@ -2,6 +2,7 @@ import 'package:bookly/Features/search/presentation/manage/searched_book_cubit/s
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomSearchTextField extends StatelessWidget {
   const CustomSearchTextField({super.key});
@@ -19,6 +20,12 @@ class CustomSearchTextField extends StatelessWidget {
         enabledBorder: buildOutlinInputBorder(),
         focusedBorder: buildOutlinInputBorder(),
         hintText: 'Search',
+        prefixIcon: IconButton(
+          onPressed: () {
+            GoRouter.of(context).pop();
+          },
+          icon: const Icon(Icons.close),
+        ),
         suffixIcon: IconButton(
           onPressed: () {
             _searchBooks(context, textEditingController.text);

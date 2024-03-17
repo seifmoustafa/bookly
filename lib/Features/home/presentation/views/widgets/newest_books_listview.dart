@@ -2,7 +2,7 @@ import 'package:bookly/Features/home/presentation/manage/newest_books_cubit/newe
 import 'package:bookly/core/widgets/custom_error_widget.dart';
 import 'package:bookly/core/widgets/custom_loading_indecator.dart';
 import 'package:flutter/widgets.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/book_list_view_item.dart';
+import 'package:bookly/core/widgets/book_list_view_item.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NewestBooksListView extends StatelessWidget {
