@@ -54,6 +54,8 @@ We welcome contributions from the community to help improve the Book Library App
 
 ## License
 
-Open Source
+Bookly App is open-source and available under LICENSE. Feel free to explore, modify, and contribute!
+
+Thank you for choosing Bookly App! We hope you enjoy discovering your next favorite read with ease and delight. If you encounter any issues or have suggestions for improvement, please don't hesitate to reach out. Happy reading!
 
 ---
