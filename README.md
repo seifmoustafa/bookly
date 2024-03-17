@@ -29,7 +29,7 @@ To get started with the Book Library App, follow these steps:
 
 1. **Clone the Repository**: Clone the GitHub repository to your local machine.
    ```
-   git clone https://github.com/your-username/book-library-app.git
+   git clone https://github.com/seifmoustafa/bookly
    ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the required dependencies.
