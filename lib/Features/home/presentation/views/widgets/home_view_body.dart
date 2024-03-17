@@ -1,27 +1,59 @@
+import 'dart:async';
 import 'dart:io';
-
-import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/featured_list_view.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/newest_books_listview.dart';
 
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+class HomeViewBody extends StatefulWidget {
+  const HomeViewBody({Key? key}) : super(key: key);
+
+  @override
+  _HomeViewBodyState createState() => _HomeViewBodyState();
+}
+
+class _HomeViewBodyState extends State<HomeViewBody> {
+  bool _doubleBackToExitPressedOnce = false;
+  late Timer _timer;
+
+  @override
+  void dispose() {
+    _timer.cancel(); // Cancel the timer when the widget is disposed
+    super.dispose();
+  }
+
+  void _resetTimerAndSnackBar() {
+    _timer.cancel(); // Cancel the timer
+    setState(() {
+      _doubleBackToExitPressedOnce = false; // Reset the flag
+    });
+    ScaffoldMessenger.of(context).hideCurrentSnackBar(); // Dismiss the SnackBar
+  }
 
   @override
   Widget build(BuildContext context) {
-    int popNum = 0;
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) async {
-        popNum++;
-        if (popNum == 2) {
+      onPopInvoked: (pop) async {
+        if (_doubleBackToExitPressedOnce) {
           exit(0);
         } else {
+          // Set the flag to true
+          setState(() {
+            _doubleBackToExitPressedOnce = true;
+          });
+
+          // Set a timer to reset the flag after 2 seconds
+          _timer = Timer(const Duration(seconds: 2), _resetTimerAndSnackBar);
+
+          // Show a snackbar to inform the user
           ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Back again to exit')));
+            const SnackBar(content: Text('Press back again to exit')),
+          );
+
+          // Don't exit the app yet
         }
       },
       child: const CustomScrollView(
@@ -37,7 +69,6 @@ class HomeViewBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // CustomAppBar(),
                 FeaturedBooksListView(),
                 SizedBox(
                   height: 50,
