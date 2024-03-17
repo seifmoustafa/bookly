@@ -34,7 +34,7 @@ To get started with the Book Library App, follow these steps:
 
 2. **Install Dependencies**: Navigate to the project directory and install the required dependencies.
    ```
-   cd book-library-app
+   cd bookly
    flutter pub get
    ```
 
