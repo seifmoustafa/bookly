@@ -16,10 +16,11 @@ Welcome to the Book Library App! This app serves as a convenient way to explore 
 - **Dynamic Updates**: The list view dynamically updates based on the user's search query, displaying relevant books fetched from the Google Books API.
 
 ## Screenshots
-![Screenshot_2024-03-17-10-09-36-001_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/f2379de0-654d-47a6-b179-cebe34ef6811)
-![Screenshot_2024-03-17-10-09-42-764_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/57f1697d-ec6e-4a7d-81df-ecb754906e42)
-![Screenshot_2024-03-17-10-09-56-596_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/1b674ec3-ffae-4339-b385-9f2bff4f2e3c)
-![Screenshot_2024-03-17-10-10-05-051_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/6857e631-c61f-421b-8d14-f3191d6782f6)
+![Screenshot_2024-03-17-10-09-36-001_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/014aa0c5-b017-4982-92b4-536ec7abb65b) _
+![Screenshot_2024-03-17-10-09-42-764_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/6a8f430b-dfb6-42c2-898c-3731eeb86036)
+
+![Screenshot_2024-03-17-10-09-56-596_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/48b7f9c7-f2ad-41bc-a987-f7451fcd7c43) _
+![Screenshot_2024-03-17-10-10-05-051_com example bookly](https://github.com/seifmoustafa/bookly/assets/58215490/898adc9d-f86e-45d1-b23d-1974f14fd16e)
 
 
 ## Getting Started
