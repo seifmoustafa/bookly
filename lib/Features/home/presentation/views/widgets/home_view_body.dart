@@ -8,13 +8,13 @@ import 'package:bookly/Features/home/presentation/views/widgets/featured_list_vi
 import 'package:bookly/Features/home/presentation/views/widgets/newest_books_listview.dart';
 
 class HomeViewBody extends StatefulWidget {
-  const HomeViewBody({Key? key}) : super(key: key);
+  const HomeViewBody({super.key});
 
   @override
-  _HomeViewBodyState createState() => _HomeViewBodyState();
+  HomeViewBodyState createState() => HomeViewBodyState();
 }
 
-class _HomeViewBodyState extends State<HomeViewBody> {
+class HomeViewBodyState extends State<HomeViewBody> {
   bool _doubleBackToExitPressedOnce = false;
   late Timer _timer;
 

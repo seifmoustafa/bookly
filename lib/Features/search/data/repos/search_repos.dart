@@ -4,5 +4,5 @@ import 'package:dartz/dartz.dart';
 
 abstract class SearchRepos {
   Future<Either<Failure, List<BookModel>>> fetchSearchedBooks(
-      {required String bookName});
+      {required String category});
 }
